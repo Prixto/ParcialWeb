@@ -17,4 +17,12 @@ public class LibroDTO {
         this.autor = libro.getAutor();
         this.biblioteca = biblioteca;
     }
+
+    public Libro toEntity() {
+        Libro libro = new Libro();
+        libro.setId(this.id);
+        libro.setAutor(this.nombre);
+        libro.setBiblioteca(this.biblioteca);
+        return libro;
+    }
 }
