@@ -30,8 +30,8 @@ public class LibroRestController {
 
     //Metodo Create
     @PostMapping("/crear")
-    public ResponseEntity<Libro> crearLibro(@RequestBody LibroDTO libroDTO) {
-        Libro nuevoLibro = iLibroService.crear(libroDTO.toEntity());
+    public ResponseEntity<Libro> crearLibro(@RequestBody Libro libro) {
+        Libro nuevoLibro = iLibroService.crear(libro);
         return new ResponseEntity<>(nuevoLibro, HttpStatus.CREATED);
     }
 

@@ -30,8 +30,8 @@ public class BibliotecaRestController {
 
     //Metodo Create
     @PostMapping("/crear")
-    public ResponseEntity<Biblioteca> crearBiblioteca(@RequestBody BibliotecaDTO bibliotecaDTO) {
-        Biblioteca nuevaBiblioteca = iBibliotecaService.crear(bibliotecaDTO.toEntity());
+    public ResponseEntity<Biblioteca> crearBiblioteca(@RequestBody Biblioteca biblioteca) {
+        Biblioteca nuevaBiblioteca = iBibliotecaService.crear(biblioteca);
         return new ResponseEntity<>(nuevaBiblioteca, HttpStatus.CREATED);
     }
 
