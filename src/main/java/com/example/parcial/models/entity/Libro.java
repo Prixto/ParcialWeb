@@ -10,11 +10,13 @@ import java.io.Serializable;
 @Table(name="LibrosJFSD")
 public class Libro implements Serializable {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    Long id;
     private String nombre;
     private String autor;
 
     @OneToOne
-    @JoinColumn(name = "biblioteca_nombre")
+    @JoinColumn(name = "biblioteca_id")
     private Biblioteca biblioteca;
 
 }

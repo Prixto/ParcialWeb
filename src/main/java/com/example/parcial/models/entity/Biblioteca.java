@@ -1,8 +1,6 @@
 package com.example.parcial.models.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.Data;
 
 @Data
@@ -11,6 +9,8 @@ import lombok.Data;
 public class Biblioteca {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    Long id;
     private String nombre;
     private String direccion;
     private String ciudad;

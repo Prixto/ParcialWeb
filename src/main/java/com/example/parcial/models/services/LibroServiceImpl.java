@@ -1,7 +1,6 @@
 package com.example.parcial.models.services;
 
 import com.example.parcial.models.entity.Libro;
-import com.example.parcial.models.repository.LibroRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
